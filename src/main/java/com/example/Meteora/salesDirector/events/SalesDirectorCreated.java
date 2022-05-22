@@ -1,18 +1,18 @@
 package com.example.Meteora.salesDirector.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import com.example.Meteora.sharedValues.SaleDate;
+import com.example.Meteora.accountant.values.AccountantName;
 
 public class SalesDirectorCreated extends DomainEvent {
 
-    private final SaleDate saleDate;
-
-    public SalesDirectorCreated(SaleDate saleDate){
-        super("meteora.salesdirector.salesdirectorcreated");
-        this.saleDate = saleDate;
+    //Constructor
+    //Between parentesis is a property that will transport from one place to another
+    public SalesDirectorCreated(){
+        //it brings a type, the domain is meteora, accountantcreated is the specific type
+        super("meteora.accountant.accountantcreated");
     }
 
-    public SaleDate getSaleDate() {
-        return saleDate;
-    }
+    //Get LOOK FOR A SHORCUT!
+    //Flat Object, it's not an entity, it's only to transport objects like a DTO
+
 }

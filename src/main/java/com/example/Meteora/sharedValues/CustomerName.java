@@ -2,10 +2,30 @@ package com.example.Meteora.sharedValues;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-public class CustomerName implements ValueObject<String> {
-    //@Override
-    public String value() {
+import java.util.Objects;
 
-        return null;
+public class CustomerName implements ValueObject<String> {
+
+    private final String value;
+
+    public CustomerName(String value){
+        this.value = Objects.requireNonNull(value);
+    }
+    @Override
+    public String value() {
+        return this.value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CustomerName that = (CustomerName) o;
+        return Objects.equals(value, that.value);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value);
     }
 }

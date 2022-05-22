@@ -5,7 +5,6 @@ import co.com.sofka.domain.generic.DomainEvent;
 import com.example.Meteora.accountant.events.*;
 import com.example.Meteora.accountant.values.*;
 import com.example.Meteora.sharedValues.CustomerName;
-import com.example.Meteora.sharedValues.SaleDate;
 
 import java.util.List;
 import java.util.Objects;
@@ -54,12 +53,11 @@ public class Accountant extends AggregateEvent<AccountantID> {
         Objects.requireNonNull(paymentDate);
         appendChange(new EmployeesPaymentAdded(entityId, wageValue, paymentDate)).apply();
     }
-    public void AddSaleBill (SaleBillID entityId, SaleDate saleDate, CustomerName customerName, TotalValue totalValue){
+    public void AddSaleBill (SaleBillID entityId, CustomerName customerName, TotalValue totalValue){
         Objects.requireNonNull(entityId);
-        Objects.requireNonNull(saleDate);
         Objects.requireNonNull(customerName);
         Objects.requireNonNull(totalValue);
-        appendChange(new SaleBillAdded(entityId, saleDate, customerName, totalValue)).apply();
+        appendChange(new SaleBillAdded(entityId, customerName, totalValue)).apply();
     }
 
     public void UpdateTotalValueOfBill (SaleBillID entityId, TotalValue totalValue ){

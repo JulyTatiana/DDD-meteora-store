@@ -52,7 +52,6 @@ public class AccountantChange extends EventChange {
             }
             accountant.saleBills.add(new SaleBill(
                     event.getEntityId(),
-                    event.getSaleDate(),
                     event.getCustomerName(),
                     event.getTotalValue()
             ));
