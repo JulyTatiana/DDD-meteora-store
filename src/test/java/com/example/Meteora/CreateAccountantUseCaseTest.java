@@ -45,7 +45,6 @@ class CreateAccountantUseCaseTest {
 
 }
 
-
 /*
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;

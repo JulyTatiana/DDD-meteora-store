@@ -1,4 +1,4 @@
 package com.example.Meteora.usecases;
 
-public class AddSaleBillUseCase {
+public class RemoveCustomerUseCase {
 }
