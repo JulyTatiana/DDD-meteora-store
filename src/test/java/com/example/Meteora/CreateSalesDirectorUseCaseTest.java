@@ -39,7 +39,7 @@ public class CreateSalesDirectorUseCaseTest {
                 .getDomainEvents();
 
 //      assert
-        SalesDirectorCreated salesDirectorCreated = (SalesDirectorCreated) domainEvents.get(0);
+        SalesDirectorCreated salesDirectorCreated = (SalesDirectorCreated) domainEvents.get(3);
         assertEquals("no accountant", salesDirectorCreated.aggregateRootId());
 
     }
