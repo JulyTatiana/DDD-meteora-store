@@ -29,4 +29,16 @@ public class Inventory extends Entity<InventoryID> {
     public Quantity quantity(){
         return quantity;
     }
+
+    public ProductName getProductName() {
+        return productName;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public Quantity getQuantity() {
+        return quantity;
+    }
 }
